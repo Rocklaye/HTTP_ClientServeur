@@ -32,7 +32,7 @@ def http_server(host="127.0.0.1", port=8080):
             reponse = "HTTP/1.1 200 OK\r\nContent-Type: text/html\r\n\r\n" + contenu
         else:
             reponse = "HTTP/1.1 401 Unauthorized\r\nContent-Type: text/html\r\n\r\n" \
-                      "<h1>401 - Fichier non trouvé</h1>"
+                      "<h1>401 - Not found</h1>"
 
         # Envoi de la réponse
         client_socket.sendall(reponse.encode())
